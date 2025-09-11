@@ -37,9 +37,7 @@ Other Tools: Git, GitHub, Vercel/Netlify for deployment
 
 📂 Project Setup
 
-Clone the repository:
-
-git clone https://github.com/<your-username>/<your-repo>.git
+Clone the repository
 cd <your-repo>
 
 
@@ -74,8 +72,7 @@ GitHub Pages → via gh-pages npm package
 
 📬 Contact
 
-Email: neha.pal@example.com
- (replace with your email)
+Email: 11a.neha.pal@example.com
 
 GitHub: github.com/Nehahahah
 
