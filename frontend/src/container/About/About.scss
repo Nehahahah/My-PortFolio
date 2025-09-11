@@ -1,0 +1,180 @@
+.about__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 4rem;
+}
+
+/* Profile Image with Glow */
+.about__img {
+  position: relative;
+  width: 280px;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  justify-self: center;
+  border: 4px solid #fff;
+  background: #f9f9f9;
+  padding: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    z-index: -1;
+    opacity: 0.6;
+    filter: blur(20px);
+  }
+}
+
+/* Info Boxes Grid */
+.about__info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: var(--mb-2);
+  justify-items: center;
+}
+
+/* Info Box Styling */
+.about__box {
+  background: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-6px) scale(1.03);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+    .about__icon {
+      color: #fff;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.about__icon {
+  font-size: 1.8rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about__title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.about__subtitle {
+  font-size: var(--smaller-font-size);
+  color: var(--gray-color);
+}
+
+/* Description Styling */
+.about__description {
+  padding: 0;
+  margin-bottom: var(--mb-2-5);
+  color: var(--gray-color);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Highlight Skills in Description */
+.about__description strong {
+  background: rgba(37, 117, 252, 0.1);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #2575fc;
+}
+
+/* Download CV Button */
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(37, 117, 252, 0.4);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+/* Section Title */
+.section__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--title-color);
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--gray-color);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .about__img {
+    width: 220px;
+  }
+
+  .about__data {
+    text-align: center;
+  }
+
+  .about__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__description {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about__img {
+    width: 180px;
+  }
+
+  .about__info {
+    grid-template-columns: 1fr;
+  }
+}
