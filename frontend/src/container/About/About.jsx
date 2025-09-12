@@ -16,7 +16,6 @@ const About = () => {
           <div className="about__data">
             <Info />
 
-            {/* Description */}
             <p className="about__description">
               Final-year <strong>Computer Science and Engineering student</strong> at VIT Bhopal, 
               passionate about <strong>Data Analytics</strong>, <strong>Full-Stack Development</strong>, 
@@ -25,7 +24,7 @@ const About = () => {
               Previously interned at <strong>Vodafone Intelligent Solutions (VOIS)</strong> as a Blockchain Intern.
             </p>
 
-            {/* Download CV button */}
+        
             <a download="Neha_Pal_Resume.pdf" href={images.resume} className="button button--flex">
               Download My Resume!!
               <svg
@@ -55,7 +54,6 @@ const About = () => {
               </svg>
             </a>
 
-            {/* Section Heading */}
             <h1 className="section__title">About Me</h1>
             <span className="subtitle">“I’m a final-year Computer Science and Engineering student at VIT Bhopal with a strong interest in Full-Stack Development, Data Analytics, and Java programming. I’ve gained hands-on experience through internships at Vodafone Intelligent Solutions (VOIS) and PlyPicker, along with multiple hackathon participations and projects. I’m passionate about solving real-world problems with scalable tech solutions and always eager to learn and grow.”</span>
           </div>
